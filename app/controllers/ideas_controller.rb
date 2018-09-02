@@ -26,6 +26,11 @@ class IdeasController < ApplicationController
     redirect_to idea_path(@idea)
   end
 
+  def destroy
+    @idea.destroy
+    redirect_to ideas_path
+  end
+
   private
 
     def ideas_params

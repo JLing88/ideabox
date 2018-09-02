@@ -2,9 +2,12 @@
 
 <h3> <%= link_to "Create New Idea", new_idea_path %>
 
-<ul>
-  <% @ideas.each do |idea| %>
-    <li> <%= idea.title %> </li>
-    <li> <%= idea.body %> </li>
-  <% end %>
-</ul>
+<% @ideas.each do |idea| %>
+  <div id="idea-<%= idea.id %>">
+    <ul>
+      <li> <%= link_to idea.title, idea_path(idea) %> </li>
+      <li> <%= idea.body %> </li>
+      <li> <%= link_to "Edit", edit_idea_path(idea)%>
+    </ul>
+  </div>
+<% end %>

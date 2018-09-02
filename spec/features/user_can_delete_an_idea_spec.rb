@@ -4,8 +4,9 @@ describe 'user can delete an idea' do
   describe 'they visit /ideas' do
     describe 'they click delete on an idea' do
       it 'displays the index page without that idea' do
-        idea_1 = Idea.create!(title: "Idea 1 Title", body: "Idea 1 Body")
-        idea_2 = Idea.create!(title: "Idea 2 Title", body: "Idea 2 Body")
+        category = Category.create!(title: "Category 1")
+        idea_1 = category.ideas.create!(title: "Idea 1 Title", body: "Idea 1 Body")
+        idea_2 = category.ideas.create!(title: "Idea 2 Title", body: "Idea 2 Body")
 
         visit ideas_path
         within("#idea-#{idea_1.id}") do

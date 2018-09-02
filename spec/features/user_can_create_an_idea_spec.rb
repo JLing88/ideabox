@@ -11,7 +11,6 @@ describe 'user can create an idea' do
           click_link "Create New Idea"
           fill_in "idea[title]", with: "Idea 1 Title"
           fill_in "idea[body]", with: "Idea 1 Body"
-          save_and_open_page
           select "#{category.title}", from: "Category"
 
           click_on "Create Idea"

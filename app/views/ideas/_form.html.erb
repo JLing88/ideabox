@@ -1,0 +1,18 @@
+<%= form_for(@idea) do |f| %>
+  <ul>
+    <% @idea.errors.full_messages.each do |e| %>
+      <li> <%= error %> </li>
+    <% end %>
+  </ul>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br/>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit%>
+  </p>
+<% end %>

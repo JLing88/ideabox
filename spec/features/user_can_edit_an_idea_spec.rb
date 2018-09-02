@@ -5,7 +5,7 @@ describe 'user can edit an idea' do
     describe 'they fill in the form' do
       it 'shows the updated idea' do
         idea_1 = Idea.create!(title: "Idea 1 Title", body: "Idea 1 Body")
-        # idea_2 = Idea.create!(title: "Idea 2 Title", body: "Idea 2 Body")
+        idea_2 = Idea.create!(title: "Idea 2 Title", body: "Idea 2 Body")
 
         visit ideas_path
 

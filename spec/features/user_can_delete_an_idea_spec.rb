@@ -8,7 +8,6 @@ describe 'user can delete an idea' do
         idea_2 = Idea.create!(title: "Idea 2 Title", body: "Idea 2 Body")
 
         visit ideas_path
-        save_and_open_page
         within("#idea-#{idea_1.id}") do
           click_on "Delete"
         end

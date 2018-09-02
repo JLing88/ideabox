@@ -1,0 +1,10 @@
+<h1>All Ideas</h1>
+
+<h3> <%= link_to "Create New Idea", new_idea_path %>
+
+<ul>
+  <% @ideas.each do |idea| %>
+    <li> <%= idea.title %> </li>
+    <li> <%= idea.body %> </li>
+  <% end %>
+</ul>

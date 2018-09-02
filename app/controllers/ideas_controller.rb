@@ -7,12 +7,13 @@ class IdeasController < ApplicationController
   end
 
   def new
+    @categories = Category.all
     @idea = Idea.new
   end
 
   def create
-    @idea = Idea.create(ideas_params)
-    redirect_to idea_path(@idea)
+    @idea = Idea.create!(ideas_params)
+    redirect_to idea_path(@idea.id)
   end
 
   def show
@@ -34,7 +35,7 @@ class IdeasController < ApplicationController
   private
 
     def ideas_params
-      params.require(:idea).permit(:body, :title)
+      params.require(:idea).permit(:body, :title, :category_id)
     end
 
     def set_idea

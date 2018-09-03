@@ -1,0 +1,14 @@
+body {
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/04/Twitter-Black-Web-Background-600x337.jpg");
+  background-size: cover;
+}
+
+.idea-show-header {
+  text-align: center;
+  color: #D7FFAB;
+}
+
+.idea-show-body {
+  text-align: center;
+  color: #D7FFAB;
+}

@@ -13,7 +13,7 @@ describe 'admin user can create a category' do
         expect(current_path).to eq(new_category_path)
 
         fill_in "category[title]", with: "New Category"
-        click_on "Submit"
+        click_on "Create Category"
 
         expect(current_path).to eq(categories_path)
         expect(page).to have_content("New Category")
